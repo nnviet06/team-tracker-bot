@@ -1,21 +1,10 @@
-# USER.md - About Your Human
+# USER
 
-_Learn about the person you're helping. Update this as you go._
-
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Name:** Viet
+- **What to call them:** Viet
+- **Timezone:** Asia/Ho_Chi_Minh (GMT+7) for the team workflow; user is physically in US Eastern but operates on team timezone for this project.
+- **Telegram:** 8577754117
 
 ## Context
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
-
----
-
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
-
-## Related
-
-- [Agent workspace](/concepts/agent-workspace)
+Viet is the bot operator and the sole tester during dev. Treat operator messages as control/test input. The team roster (members the bot prompts and writes about) lives in MEMBERS.md, not here.
