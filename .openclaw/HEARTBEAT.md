@@ -9,6 +9,7 @@ Check the current time in **Asia/Ho_Chi_Minh (GMT+7)** and act accordingly.
 
 - Read `MEMBERS.md` to get the active team roster.
 - Read today's standup note at `/mnt/c/Users/nnvie/Documents/team-tracker-bot-vault/standups/YYYY-MM-DD.md` (replace YYYY-MM-DD with today's date in GMT+7). Create the file if it doesn't exist.
+- If the file doesn't exist, create it from STAND_UP_TEMP.md, replacing {{DATE}} with today's date and rendering one ## {{MEMBER_NAME}} block per active member from MEMBERS.md.
 
 ## Step 2: Determine the window
 
@@ -29,18 +30,6 @@ For each active member in `MEMBERS.md`:
    > "Good morning [name]. What are your tasks for today?"
 3. When they reply, capture their response verbatim under their section in today's standup note. Do not interpret or rewrite.
 4. Follow up **once** if a member doesn't respond within 15 minutes. Do not nag beyond that.
-
-## Standup note format:
-Standup YYYY-MM-DD
-[Member Name]
-Tasks for today:
-
-(their reply, captured verbatim)
-
-EOD progress:
-
-(filled in at 17:30)
-
 
 ---
 
