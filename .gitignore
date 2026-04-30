@@ -144,3 +144,6 @@ vite.config.ts.timestamp-*
 
 # OpenClaw
 .openclaw/.openclaw/
+
+# Obsidian vault path (name of vault)
+vault/ 
