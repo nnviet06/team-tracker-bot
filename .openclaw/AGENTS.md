@@ -36,16 +36,12 @@ Write it down. Mental notes don't survive session restarts.
 The bot operates a daily cycle. Implementation details live in `openspec/` specs as they are built.
 
 ### Morning reminder
-- Sent to the team Telegram group at a configured time (default: 09:00 local).
-- Prompts each team member for: yesterday's progress, today's plan, current blockers.
+- Sent to the team Telegram group during the morning window (09:30–10:00 GMT+7).
+- Prompts each team member for today's tasks.
 - Captures responses into the day's Obsidian note.
 
-### Task updates (rolling, throughout day)
-- Team members can post updates anytime via Telegram (DM or group, command-driven — exact commands defined in spec).
-- Each update appends to the team member's section in the day's Obsidian note with a timestamp.
-
 ### End-of-day report
-- Sent at a configured time (default: 18:00 local).
+- Sent during the EOD window (17:30–18:00 GMT+7).
 - Aggregates the day's check-ins, updates, and unresolved blockers into a single summary.
 - Posted to the team group and saved to Obsidian.
 
@@ -57,7 +53,7 @@ The bot operates a daily cycle. Implementation details live in `openspec/` specs
 
 - Obsidian vault path: configured in workspace settings (TBD — set when Obsidian is installed).
 - Daily notes: one file per day, one section per team member.
-- Naming: `YYYY-MM-DD-standup.md` (subject to change once vault structure is finalized).
+- Naming: `YYYY-MM-DD.md`. (subject to change once vault structure is finalized).
 
 ## Tools
 

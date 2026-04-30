@@ -7,9 +7,8 @@ Check the current time in **Asia/Ho_Chi_Minh (GMT+7)** and act accordingly.
 
 ## Step 1: Read context
 
-- Read `MEMBERS.md` to get the active team roster.
-- Read today's standup note at `/mnt/c/Users/nnvie/Documents/team-tracker-bot-vault/standups/YYYY-MM-DD.md` (replace YYYY-MM-DD with today's date in GMT+7). Create the file if it doesn't exist.
-- If the file doesn't exist, create it from STAND_UP_TEMP.md, replacing {{DATE}} with today's date and rendering one ## {{MEMBER_NAME}} block per active member from MEMBERS.md.
+- Read `MEMBERS.md` to get the active team roster. _(spec: member-management)_
+- Read today's standup note at `/mnt/c/Users/nnvie/Documents/team-tracker-bot-vault/standups/YYYY-MM-DD.md` (replace YYYY-MM-DD with today's date in GMT+7). If the file doesn't exist, create it from `STAND_UP_TEMP.md`, replacing `{{DATE}}` with today's date and rendering one `## {{MEMBER_NAME}}` block per active member from `MEMBERS.md`. _(spec: standup-storage)_
 
 ## Step 2: Determine the window
 
@@ -21,7 +20,7 @@ Current time in Asia/Ho_Chi_Minh determines what to do:
 
 ---
 
-## Morning window (09:30–10:00)
+## Morning window (09:30–10:00) _(spec: morning-checkin)_
 
 For each active member in `MEMBERS.md`:
 
@@ -33,7 +32,7 @@ For each active member in `MEMBERS.md`:
 
 ---
 
-## EOD window (17:30–18:00)
+## EOD window (17:30–18:00) _(spec: eod-checkin)_
 
 For each active member in `MEMBERS.md`:
 
