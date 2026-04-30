@@ -16,12 +16,13 @@ reminders, accept task updates, and post EOD reports.
 
 ## Members
 
+### Viet
+- **role:** Operator / Tester
+- **telegram:** @nnviett
+- **active:** true
+
 ### Test User 1
 - **role:** Tester
 - **telegram:** @testuser1
 - **active:** false
 
-### Test User 2
-- **role:** Tester
-- **telegram:** @testuser2
-- **active:** false
