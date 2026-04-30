@@ -1,44 +1,13 @@
-# TOOLS.md - Local Notes
+# TOOLS.md - Local Configuration
 
-Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
+## Obsidian
+- Vault path: `/mnt/c/Users/nnvie/Documents/team-tracker-bot-vault` (add your path here)
+- Daily notes folder: `standups/` (within vault) 
+- File naming: `YYYY-MM-DD-standup.md`
 
-## What Goes Here
+## Telegram
+- Bot token: in `.env` as `TELEGRAM_BOT_TOKEN` (do not commit)
+- Chat IDs: TBD (set during testing)
 
-Things like:
-
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
-
-## Examples
-
-```markdown
-### Cameras
-
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
-
-### SSH
-
-- home-server → 192.168.1.100, user: admin
-
-### TTS
-
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
-```
-
-## Why Separate?
-
-Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
-
----
-
-Add whatever helps you do your job. This is your cheat sheet.
-
-## Related
-
-- [Agent workspace](/concepts/agent-workspace)
+## Team Roster
+- nnviet (tester / sole member during dev) (add your members here)
