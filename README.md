@@ -14,6 +14,72 @@ Built on [OpenClaw](https://docs.openclaw.ai) (agent runtime) with workflow spec
 
 No interpretation, no encouragement, no fabrication. Capture is the product.
 
+## How it works
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    HEARTBEAT TICK (every 5m)                    │
+│                  active: 09:30–18:00 GMT+7                      │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │  Read HEARTBEAT.md   │
+                  │  Check current time  │
+                  └──────────┬───────────┘
+                             │
+            ┌────────────────┼────────────────┐
+            ▼                ▼                ▼
+      ┌──────────┐    ┌──────────┐    ┌──────────────┐
+      │  09:30–  │    │  17:30–  │    │  Other time  │
+      │  10:00   │    │  18:00   │    │   → exit     │
+      └────┬─────┘    └────┬─────┘    └──────────────┘
+           │               │
+           ▼               ▼
+    ┌───────────────────────────────┐
+    │   Read MEMBERS.md (roster)    │
+    │   Read today's standup note   │
+    │   (create from template       │
+    │    if missing)                │
+    └──────────────┬────────────────┘
+                   │
+                   ▼
+         ┌──────────────────┐
+         │ For each active  │
+         │     member:      │
+         └────────┬─────────┘
+                  │
+                  ▼
+        ┌─────────────────────┐         already replied?
+        │  Section filled?    │ ───yes──► skip
+        └─────────┬───────────┘
+                  │ no
+                  ▼
+       ┌──────────────────────┐
+       │  Send Telegram DM    │
+       │  (morning or EOD     │
+       │   prompt)            │
+       └──────────┬───────────┘
+                  │
+                  ▼
+       ┌──────────────────────┐
+       │  Wait for reply      │
+       │  (15min → 1 follow-up│
+       │   max, then          │
+       │   "No update")       │
+       └──────────┬───────────┘
+                  │
+                  ▼
+       ┌──────────────────────┐
+       │  Write verbatim to   │
+       │  standups/           │
+       │  YYYY-MM-DD.md       │
+       └──────────────────────┘
+
+       At 18:00 → append Team Summary section
+                  (verbatim quote + 1-sentence factual restatement)
+```
+
+
 ## Requirements
 
 - WSL2 or native Linux (OpenClaw does not support Windows natively or macOS without adjustments)
